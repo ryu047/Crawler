@@ -1,0 +1,16 @@
+{
+  "name": "Crawler",
+  "version": "1.0.0",
+  "description": "Search for anything on web.",
+  "scripts": {
+    "start": "node main.js"
+    },
+  "author": "Sagar Gupta",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^0.19.0",
+    "url-parse": "^1.0.5",
+    "request": "^2.65.0",
+    "lodash": "~3.10.1"
+  }
+}
