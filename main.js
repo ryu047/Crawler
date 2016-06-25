@@ -1,7 +1,7 @@
 'use strict';
 
-var fs = require('fs');
-var Crawler = require('./crawler.js');
+let fs = require('fs');
+let Crawler = require('./crawler.js');
 
 /*
 Search term is passed as command line argument.
@@ -12,19 +12,19 @@ if(process.argv.length <= 2){
 	return;
 }
 
-var term = process.argv[2];
+let term = process.argv[2];
 
 /*
 options must have address and term properties. Rest are optional.
 */
 
-var options = {
+let options = {
 	address: 'http://www.quora.com',
 	term: term,
 	maxPages: 100
 };
 
-var crawler = new Crawler(options);
+let crawler = new Crawler(options);
 
 crawler.start();
 

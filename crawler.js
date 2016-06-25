@@ -1,6 +1,6 @@
 'use strict';
 
-var request = require('request'),
+let request = require('request'),
 	cheerio = require('cheerio'),
 	urlParse = require('url-parse'),
 	_ = require('lodash');
@@ -9,7 +9,7 @@ var request = require('request'),
 Function to log messages to console.
 */
 
-var logMessage = (message)=>{
+let logMessage = (message)=>{
 	console.log(message);
 };
 
