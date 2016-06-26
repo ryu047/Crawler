@@ -15,7 +15,7 @@ To configure Crawler, edit the following options in the 'Options' object in 'mai
 
 1. address: This is the website to be crawled. http://quora.com is passed by default. It can be any known address.
 2. term: This is passed through command line only while starting Crawler.( `npm start search_term`)
-3. maxPages: This is the maximum number of pages of the website that will be crawled. 50 is set by default.
+3. maxPages: This is the maximum number of pages of the website that will be crawled. 100 is set by default.
 4. maxConcurrency: This is maximum number of requests can be sent at any given time. 5 is set by default.
 
 **Ouput**
