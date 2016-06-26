@@ -1,6 +1,5 @@
 'use strict';
 
-let fs = require('fs');
 let Crawler = require('./crawler.js');
 
 /*
@@ -15,24 +14,14 @@ if(process.argv.length <= 2){
 let term = process.argv[2];
 
 /*
-options must have address and term properties. Rest are optional.
+Address and Term are mandatory properties to pass in the Crawler.
 */
 
 let options = {
-	address: 'http://www.quora.com',
-	term: term,
-	maxPages: 100
+	address: 'http://www.bleach.wikia.com',
+	term: term
 };
 
 let crawler = new Crawler(options);
 
 crawler.start();
-
-crawler.promise.then((links)=>{
-	let text = '';
-	links.forEach((link)=>{
-		text += '<li><a href=' + link + '>' + link + '</a></li>';
-	});
-	fs.writeFileSync(term + '.html', text);
-	process.exit();
-});

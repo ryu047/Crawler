@@ -3,14 +3,24 @@
 let request = require('request'),
 	cheerio = require('cheerio'),
 	urlParse = require('url-parse'),
-	_ = require('lodash');
+	_ = require('lodash'),
+	fs = require('fs');
 
 /*
 Function to log messages to console.
 */
 
-let logMessage = (message)=>{
+let logMessage = message => {
 	console.log(message);
+};
+
+let printLinks = (links, term) => {
+	let text = '';
+	links.forEach((link)=>{
+		text += '<li><a href=' + link + '>' + link + '</a></li>';
+	});
+	fs.writeFileSync(term + '.html', text);
+	process.exit();
 };
 
 /*
@@ -32,17 +42,15 @@ class Crawler {
 		that.SEARCH_TERM = options.term;
 		that.MAX_CONCURRENCY = options.maxConcurrency || 5;
 		that.currentConcurrency = 0;
-		that.MAX_PAGES = options.maxPages || 50;
+		that.MAX_PAGES = options.maxPages || 100;
 		that.stopped = {status: false};
-		that.promise = new Promise((resolve, reject)=>{
-			Object.observe(that.stopped, (changes)=>{
-				logMessage('\nCrawling done!\n');
-				logMessage('Word found on following links:\n');
-				logMessage(that.wordLinks);
-				logMessage('\nCould not crawl following links:\n');
-				logMessage(that.failedLinks);
-				resolve(that.wordLinks);
-			});
+		Object.observe(that.stopped, (changes)=>{
+			logMessage('\nCrawling done!\n');
+			logMessage('Word found on following links:\n');
+			logMessage(that.wordLinks);
+			logMessage('\nCould not crawl following links:\n');
+			logMessage(that.failedLinks);
+			printLinks(that.wordLinks, that.SEARCH_TERM);
 		});
 	}
 
