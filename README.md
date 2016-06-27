@@ -28,8 +28,8 @@ Crawler is simple NodeJS based web crawler that crawls a website within seconds.
 
 To configure Crawler, provide following options to the crawler object. 
 
-1. address: This is the website to be crawled. http://quora.com is passed by default. It can be any known address.
-2. term: This is passed through command line only while starting Crawler.( `npm start search_term`)
+1. address: This is the website to be crawled. `http://www.quora.com` is currently passed in default main.js in the repo.
+2. term: Term to be searched on the website. Provided as a command line argument if using default main.js.
 3. maxPages: This is the maximum number of pages of the website that will be crawled. 100 is set by default.
 4. maxConcurrency: This is maximum number of requests can be sent at any given time. 5 is set by default.
 
