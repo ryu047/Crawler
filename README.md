@@ -9,9 +9,24 @@ Crawler is simple NodeJS based web crawler that crawls a website within seconds.
 2. `npm install`.
 3. `npm start search_term`.
 
+**Installation**
+
+`npm install Crawler`
+
+**Usage**
+
+`var Crawler = require('Crawler');`
+
+`var c = new Crawler({
+  address: 'http://www.example.com',
+  term: 'example'
+});`
+
+`c.start();`
+
 **Configuration Options**
 
-To configure Crawler, edit the following options in the 'Options' object in 'main.js' file. 
+To configure Crawler, provide following options to the crawler object. 
 
 1. address: This is the website to be crawled. http://quora.com is passed by default. It can be any known address.
 2. term: This is passed through command line only while starting Crawler.( `npm start search_term`)
