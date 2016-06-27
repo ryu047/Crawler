@@ -1,15 +1,15 @@
 {
   "name": "Crawler",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Search for anything on web.",
   "scripts": {
     "start": "node main.js"
-    },
-  "main" : "crawler.js",
+  },
+  "main": "crawler.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/ryu047/Crawler"
-    },
+  },
   "keywords": [
     "crawler",
     "search",
