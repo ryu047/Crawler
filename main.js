@@ -18,7 +18,7 @@ Address and Term are mandatory properties to pass in the Crawler.
 */
 
 let options = {
-	address: 'http://www.bleach.wikia.com',
+	address: 'http://www.quora.com',
 	term: term
 };
 
