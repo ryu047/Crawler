@@ -15,14 +15,14 @@ Crawler is simple NodeJS based web crawler that crawls a website within seconds.
 
 **Usage**
 
-`var Crawler = require('Crawler');`
-
-`var c = new Crawler({
+```javascript
+var Crawler = require('Crawler');
+var c = new Crawler({
   address: 'http://www.example.com',
   term: 'example'
-});`
-
-`c.start();`
+});
+c.start();
+```
 
 **Configuration Options**
 
