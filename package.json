@@ -1,6 +1,6 @@
 {
   "name": "Crawler",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Search for anything on web.",
   "scripts": {
     "start": "node main.js"
