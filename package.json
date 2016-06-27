@@ -5,6 +5,14 @@
   "scripts": {
     "start": "node main.js"
     },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ryu047/Crawler"
+    },
+  "keywords": [
+    "crawler",
+    "search"
+  ],
   "author": "Sagar Gupta",
   "license": "MIT",
   "dependencies": {
