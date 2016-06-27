@@ -5,6 +5,7 @@
   "scripts": {
     "start": "node main.js"
     },
+  "main" : "crawler.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/ryu047/Crawler"
